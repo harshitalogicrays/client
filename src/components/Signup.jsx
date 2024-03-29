@@ -6,6 +6,7 @@ import Loader from '../components/Loader'
 import { createUserWithEmailAndPassword } from 'firebase/auth'
 import { auth, db } from '../firebase/config'
 import { Timestamp, doc, setDoc } from 'firebase/firestore'
+import RegisterImg from '/src/assets/register.png'
 const Signup = () => {
     let initialState={username:'',email:'',password:'',cpassword:'',role:'user'}
     let[user,setUser]=useState({...initialState})
@@ -61,7 +62,7 @@ const Signup = () => {
         <h1>Signup Page</h1><hr/>
     <Row>
         <Col xs={6}>
-            <Image src="/src/assets/register.png" fluid/>
+            <Image src={RegisterImg} fluid/>
         </Col>
         <Col xs={6}>
             <Form onSubmit={handleSubmit}>

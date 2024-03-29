@@ -8,7 +8,7 @@ import { auth, db } from '../firebase/config'
 import { Timestamp, doc, getDoc, setDoc } from 'firebase/firestore'
 import { useSelector } from 'react-redux'
 import { selectURL } from '../redux/cartSlice'
-
+import LoginImg from '/src/assets/login.png'
 const Login = () => {
   let[user,setUser]=useState({email:'',password:''})
   let [isLoading,setIsLoading]=useState(false)
@@ -96,7 +96,7 @@ const Login = () => {
     <h1>Login Page</h1><hr/>
 <Row>
     <Col xs={6}>
-        <Image src="/src/assets/login.png" fluid/>
+        <Image src={LoginImg} fluid/>
     </Col>
     <Col xs={6}>
         <Form onSubmit={handleSubmit}>
